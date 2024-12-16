@@ -1,0 +1,44 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template-typescript": "1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "parcel build/index.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:widget": "parcel build src/index.tsx --no-source-maps --dist-dir widget && npx copyfiles build/static/css/* widget/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "copyfiles": "^2.4.1",
+    "parcel": "^2.13.2",
+    "postcss": "^8.4.49",
+    "process": "^0.11.10"
+  }
+}
