@@ -11,8 +11,8 @@ widgets.forEach((widget) => {
 
   root.render(
     <React.StrictMode>
-      <App id={widget.CDATA_SECTION_NODE.symbol} />
-      <Hello id={widget.CDATA_SECTION_NODE.symbol} />
+      <App id={widget.dataset.symbol} />
+      <Hello id={widget.dataset.symbol} />
     </React.StrictMode>
   );
 });
