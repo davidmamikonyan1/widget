@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
+import { Counter } from "./Counter.tsx";
+import { Hello } from "./Hello.tsx";
 
 export function App({ id }) {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
+  const handleShowComponent = () => {
+    switch (id) {
+      case "AAA":
+        return <Counter />;
+      case "BBB":
+        return <Hello />;
+      default:
+        return null;
+    }
   };
 
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
-  return (
-    <div>
-      <h3>Counter Widget id={id}</h3>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-    </div>
-  );
+  return <div>{handleShowComponent()}</div>;
 }
