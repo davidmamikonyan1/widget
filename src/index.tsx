@@ -7,11 +7,9 @@ const widgets = document.querySelectorAll(".container-widget");
 
 widgets.forEach((widget) => {
   const root = ReactDOM.createRoot(widget);
-  console.log(root, "root");
-
   root.render(
     <React.StrictMode>
-      <App />
+      <App id={widget.dataset.symbol}/>
     </React.StrictMode>
   );
 });
