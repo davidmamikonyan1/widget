@@ -6,15 +6,6 @@ import ReactDOM from "react-dom/client";
 export function Counter() {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-   const el =  document.querySelector('#container-widget-counter')
-
-   if(el && !el.childNodes.length) {
-    const root =  ReactDOM.createRoot(el)
-    root.render(<Counter />)
-   }
-  }, []);
-
   const increment = () => {
     setCount(count + 1);
   };
@@ -32,3 +23,10 @@ export function Counter() {
     </div>
   );
 }
+
+const el =  document.querySelector('#container-widget-counter')
+
+  if(el) {
+   const root =  ReactDOM.createRoot(el)
+   root.render(<Counter />)
+  }

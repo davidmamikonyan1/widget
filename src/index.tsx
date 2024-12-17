@@ -6,7 +6,7 @@ import { App } from "./App.tsx";
 const widgets = document.querySelectorAll(".container-widget");
 
 widgets.forEach((widget) => {
-  const widgetElement = widget as HTMLElement;
+  const widgetElement = widget as HTMLElement; 
   const root = ReactDOM.createRoot(widgetElement);
   root.render(
     <React.StrictMode>
